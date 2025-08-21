@@ -1,38 +1,15 @@
-// Базовые анимации появления
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+// Анимации для страницы курсов
+
+// Базовые переходы
+:root {
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInUp {
+// Анимации появления элементов
+@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -43,22 +20,32 @@
   }
 }
 
-@keyframes slideInDown {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateX(-30px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-// Анимации масштабирования
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   to {
     opacity: 1;
@@ -66,386 +53,276 @@
   }
 }
 
-@keyframes scaleInUp {
+@keyframes slideInUp {
   from {
     opacity: 0;
-    transform: scale(0.8) translateY(20px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: translateY(0);
   }
 }
 
-// Анимации вращения
-@keyframes rotateIn {
-  from {
-    opacity: 0;
-    transform: rotate(-200deg);
+// Классы анимаций
+.animate {
+  &--fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
   }
-  to {
-    opacity: 1;
-    transform: rotate(0);
+  
+  &--fade-in-left {
+    animation: fadeInLeft 0.6s ease forwards;
+  }
+  
+  &--fade-in-right {
+    animation: fadeInRight 0.6s ease forwards;
+  }
+  
+  &--scale-in {
+    animation: scaleIn 0.5s ease forwards;
+  }
+  
+  &--slide-in-up {
+    animation: slideInUp 0.8s ease forwards;
   }
 }
 
-@keyframes rotateInUpLeft {
-  from {
-    opacity: 0;
-    transform: rotate(45deg);
-    transform-origin: left bottom;
+// Анимации при наведении
+.hover-lift {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-4px);
   }
-  to {
-    opacity: 1;
-    transform: rotate(0);
-    transform-origin: left bottom;
+}
+
+.hover-scale {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: scale(1.05);
   }
+}
+
+.hover-glow {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
+  }
+}
+
+// Анимации для карточек курсов
+.course-card {
+  animation: fadeInUp 0.6s ease forwards;
+  
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+}
+
+// Анимации для feature карточек
+.feature-card {
+  animation: scaleIn 0.5s ease forwards;
+  
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+  &:nth-child(4) { animation-delay: 0.4s; }
+  &:nth-child(5) { animation-delay: 0.5s; }
+  &:nth-child(6) { animation-delay: 0.6s; }
+}
+
+// Анимации для расписания
+.schedule-card {
+  animation: slideInUp 0.6s ease forwards;
+  
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+  &:nth-child(4) { animation-delay: 0.4s; }
+}
+
+// Анимации для FAQ
+.faq-item {
+  animation: fadeInUp 0.5s ease forwards;
+  
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.2s; }
+  &:nth-child(3) { animation-delay: 0.3s; }
+  &:nth-child(4) { animation-delay: 0.4s; }
+  &:nth-child(5) { animation-delay: 0.5s; }
+  &:nth-child(6) { animation-delay: 0.6s; }
 }
 
 // Анимации для кнопок
-@keyframes buttonPulse {
-  0% {
-    transform: scale(1);
+.btn {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-2px);
   }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes buttonShake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-2px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(2px);
-  }
-}
-
-// Анимации для карточек
-@keyframes cardFloat {
-  0%, 100% {
+  
+  &:active {
     transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes cardGlow {
-  0%, 100% {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  50% {
-    box-shadow: 0 10px 15px -3px rgba(255, 107, 157, 0.3);
-  }
-}
-
-// Анимации для изображений
-@keyframes imageZoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes imageSlide {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-// Анимации для текста
-@keyframes textReveal {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(0 0% 0 0);
-  }
-}
-
-@keyframes textSlideUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
 // Анимации для иконок
-@keyframes iconBounce {
-  0%, 20%, 53%, 80%, 100% {
-    transform: translate3d(0, 0, 0);
-  }
-  40%, 43% {
-    transform: translate3d(0, -8px, 0);
-  }
-  70% {
-    transform: translate3d(0, -4px, 0);
-  }
-  90% {
-    transform: translate3d(0, -2px, 0);
+.feature-card__icon {
+  transition: var(--transition-normal);
+  
+  .feature-card:hover & {
+    transform: scale(1.1) rotate(5deg);
   }
 }
 
-@keyframes iconRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-// Анимации для загрузки
-@keyframes loadingSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+// Анимации для бейджей
+.course-card__badge {
+  transition: var(--transition-normal);
+  
+  .course-card:hover & {
+    transform: scale(1.05);
   }
 }
 
-@keyframes loadingPulse {
-  0% {
+// Анимации для цен
+.course-card__price-amount {
+  transition: var(--transition-normal);
+  
+  .course-card:hover & {
+    transform: scale(1.1);
+  }
+}
+
+// Анимации для изображений
+.hero__img {
+  transition: var(--transition-slow);
+  
+  .hero--courses:hover & {
+    transform: scale(1.05) rotate(2deg);
+  }
+}
+
+// Анимации для социальных иконок
+.social-link {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-3px) scale(1.1);
+  }
+}
+
+// Анимации для мобильного меню
+.mobile-menu-toggle {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Анимации для логотипа
+.logo {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Анимации для навигации
+.menu__link {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+// Анимации для телефонной ссылки
+.phone-link {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Анимации для футера
+.footer__section {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Анимации для ссылок в футере
+.footer__list a {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+
+// Анимации для контактной информации
+.footer__contact-item {
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+
+// Анимации для FAQ переключателей
+.faq-toggle {
+  transition: var(--transition-normal);
+  
+  .faq-item.active & {
+    transform: rotate(45deg);
+  }
+}
+
+// Анимации для ответов FAQ
+.faq-answer {
+  transition: var(--transition-normal);
+  
+  .faq-item.active & {
+    animation: fadeInUp 0.3s ease forwards;
+  }
+}
+
+// Анимации для CTA секции
+.cta__content {
+  animation: scaleIn 0.8s ease forwards;
+}
+
+// Анимации для заголовков секций
+.section-header {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+// Анимации для контейнера
+.container {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+// Анимации для мобильных устройств
+@media (max-width: 768px) {
+  .course-card,
+  .feature-card,
+  .schedule-card,
+  .faq-item {
+    animation: none;
     opacity: 1;
+    transform: none;
   }
-  50% {
-    opacity: 0.5;
+  
+  .hero__img {
+    .hero--courses:hover & {
+      transform: none;
+    }
   }
-  100% {
-    opacity: 1;
-  }
-}
-
-// Анимации для модальных окон
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes modalSlideIn {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-// Анимации для уведомлений
-@keyframes notificationSlideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes notificationShake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-2px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(2px);
-  }
-}
-
-// Анимации для прогресс-баров
-@keyframes progressFill {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-// Анимации для счетчиков
-@keyframes countUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// Анимации для hover эффектов
-@keyframes hoverLift {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-5px);
-  }
-}
-
-@keyframes hoverGlow {
-  from {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    box-shadow: 0 10px 15px -3px rgba(255, 107, 157, 0.4);
-  }
-}
-
-// Классы для применения анимаций
-.animate {
-  animation-duration: 0.6s;
-  animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate--fast {
-  animation-duration: 0.3s;
-}
-
-.animate--slow {
-  animation-duration: 1s;
-}
-
-.animate--delay-1 {
-  animation-delay: 0.1s;
-}
-
-.animate--delay-2 {
-  animation-delay: 0.2s;
-}
-
-.animate--delay-3 {
-  animation-delay: 0.3s;
-}
-
-.animate--delay-4 {
-  animation-delay: 0.4s;
-}
-
-.animate--delay-5 {
-  animation-delay: 0.5s;
-}
-
-// Анимации появления при скролле
-.fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-.slide-in-left {
-  animation: slideInLeft 0.6s ease-out forwards;
-}
-
-.slide-in-right {
-  animation: slideInRight 0.6s ease-out forwards;
-}
-
-.slide-in-up {
-  animation: slideInUp 0.6s ease-out forwards;
-}
-
-.slide-in-down {
-  animation: slideInDown 0.6s ease-out forwards;
-}
-
-.scale-in {
-  animation: scaleIn 0.6s ease-out forwards;
-}
-
-.scale-in-up {
-  animation: scaleInUp 0.6s ease-out forwards;
-}
-
-.rotate-in {
-  animation: rotateIn 0.6s ease-out forwards;
-}
-
-.rotate-in-up-left {
-  animation: rotateInUpLeft 0.6s ease-out forwards;
-}
-
-// Анимации для интерактивных элементов
-.btn:hover {
-  animation: buttonPulse 0.3s ease-in-out;
-}
-
-.card:hover {
-  animation: cardFloat 2s ease-in-out infinite;
-}
-
-.icon:hover {
-  animation: iconBounce 1s ease-in-out;
-}
-
-// Анимации для загрузки
-.loading {
-  animation: loadingSpin 1s linear infinite;
-}
-
-.loading--pulse {
-  animation: loadingPulse 1.5s ease-in-out infinite;
-}
-
-// Анимации для модальных окон
-.modal {
-  animation: modalFadeIn 0.3s ease-out;
-}
-
-.modal__content {
-  animation: modalSlideIn 0.3s ease-out;
-}
-
-// Анимации для уведомлений
-.notification {
-  animation: notificationSlideIn 0.3s ease-out;
-}
-
-.notification--shake {
-  animation: notificationShake 0.5s ease-in-out;
-}
-
-// Анимации для прогресс-баров
-.progress-bar__fill {
-  animation: progressFill 1s ease-out forwards;
-}
-
-// Анимации для счетчиков
-.counter {
-  animation: countUp 0.6s ease-out forwards;
-}
-
-// Анимации для hover эффектов
-.hover-lift:hover {
-  animation: hoverLift 0.3s ease-out forwards;
-}
-
-.hover-glow:hover {
-  animation: hoverGlow 0.3s ease-out forwards;
 }

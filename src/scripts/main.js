@@ -1,7 +1,8 @@
 // Импорт модулей
 import { Navigation } from './modules/navigation.js';
 import { LanguageManager } from './modules/language.js';
-import { ThemeSwitcher } from './modules/theme-switcher.js';
+// import { ThemeSwitcher } from './modules/theme-switcher.js';
+import { FAQManager } from './modules/faq.js';
 
 // Основной класс приложения
 class App {
@@ -16,8 +17,8 @@ class App {
             this.languageManager = window.languageManager;
         }
         
-        // Инициализируем переключатель тем
-        this.themeSwitcher = new ThemeSwitcher();
+        // Переключатель тем отключен
+        // this.themeSwitcher = new ThemeSwitcher();
         
         this.init();
     }
@@ -213,15 +214,17 @@ class App {
 
     // Публичные методы для управления темами
     changeTheme(theme) {
-        if (this.themeSwitcher) {
-            this.themeSwitcher.setTheme(theme);
-        }
+        // Переключатель тем отключен
+        // if (this.themeSwitcher) {
+        //     this.themeSwitcher.setTheme(theme);
+        // }
     }
 
     getCurrentTheme() {
-        if (this.themeSwitcher) {
-            return this.themeSwitcher.getCurrentTheme();
-        }
+        // Переключатель тем отключен
+        // if (this.themeSwitcher) {
+        //     return this.themeSwitcher.getCurrentTheme();
+        // }
         return 'minimal';
     }
 }
