@@ -1,0 +1,49 @@
+<svg width="250" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradBeforeAfterEyes" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A8E6CF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB5C2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Фон -->
+  <rect width="100%" height="100%" fill="url(#gradBeforeAfterEyes)"/>
+  
+  <!-- Разделитель -->
+  <line x1="50%" y1="0" x2="50%" y2="100%" stroke="white" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Левая сторона - ДО -->
+  <g transform="translate(30, 50)">
+    <!-- Ресницы до -->
+    <path d="M-20 0 Q-15 -8 -10 0 Q-15 8 -20 0" fill="#8B4513" opacity="0.4"/>
+    <path d="M-15 0 Q-10 -6 -5 0 Q-10 6 -15 0" fill="#8B4513" opacity="0.4"/>
+    <path d="M-10 0 Q-5 -4 0 0 Q-5 4 -10 0" fill="#8B4513" opacity="0.4"/>
+    <path d="M-5 0 Q0 -2 5 0 Q0 2 -5 0" fill="#8B4513" opacity="0.4"/>
+    <path d="M0 0 Q5 -2 10 0 Q5 2 0 0" fill="#8B4513" opacity="0.4"/>
+    <path d="M5 0 Q10 -4 15 0 Q10 4 5 0" fill="#8B4513" opacity="0.4"/>
+    <path d="M10 0 Q15 -6 20 0 Q15 6 10 0" fill="#8B4513" opacity="0.4"/>
+    <path d="M15 0 Q20 -8 25 0 Q20 8 15 0" fill="#8B4513" opacity="0.4"/>
+    
+    <!-- Текст "ДО" -->
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">ДО</text>
+  </g>
+  
+  <!-- Правая сторона - ПОСЛЕ -->
+  <g transform="translate(170, 50)">
+    <!-- Ресницы после -->
+    <path d="M-20 0 Q-15 -12 -10 0 Q-15 12 -20 0" fill="#8B4513" opacity="0.9"/>
+    <path d="M-15 0 Q-10 -9 -5 0 Q-10 9 -15 0" fill="#8B4513" opacity="0.9"/>
+    <path d="M-10 0 Q-5 -6 0 0 Q-5 6 -10 0" fill="#8B4513" opacity="0.9"/>
+    <path d="M-5 0 Q0 -3 5 0 Q0 3 -5 0" fill="#8B4513" opacity="0.9"/>
+    <path d="M0 0 Q5 -3 10 0 Q5 3 0 0" fill="#8B4513" opacity="0.9"/>
+    <path d="M5 0 Q10 -6 15 0 Q10 6 5 0" fill="#8B4513" opacity="0.9"/>
+    <path d="M10 0 Q15 -9 20 0 Q15 9 10 0" fill="#8B4513" opacity="0.9"/>
+    <path d="M15 0 Q20 -12 25 0 Q20 12 15 0" fill="#8B4513" opacity="0.9"/>
+    
+    <!-- Текст "ПОСЛЕ" -->
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">ПОСЛЕ</text>
+  </g>
+  
+  <!-- Заголовок -->
+  <text x="50%" y="20" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">До и После</text>
+</svg>
