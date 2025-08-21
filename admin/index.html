@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - Beauty Master</title>
+    <meta name="description" content="Панель управления контентом сайта">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="styles/admin.css">
+    
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <h1 class="sidebar-title">Beauty Master</h1>
+                <p class="sidebar-subtitle">Админ-панель</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#dashboard" class="nav-link nav-link--active" data-section="dashboard">
+                            <span class="nav-icon">📊</span>
+                            Дашборд
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#content" class="nav-link" data-section="content">
+                            <span class="nav-icon">📝</span>
+                            Контент
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link" data-section="services">
+                            <span class="nav-icon">💅</span>
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link" data-section="portfolio">
+                            <span class="nav-icon">🖼️</span>
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#courses" class="nav-link" data-section="courses">
+                            <span class="nav-icon">🎓</span>
+                            Курсы
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link" data-section="blog">
+                            <span class="nav-icon">📰</span>
+                            Блог
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#settings" class="nav-link" data-section="settings">
+                            <span class="nav-icon">⚙️</span>
+                            Настройки
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="btn btn--logout" id="logoutBtn">
+                    <span class="btn-icon">🚪</span>
+                    Выйти
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="header-content">
+                    <h2 class="page-title" id="pageTitle">Дашборд</h2>
+                    <div class="header-actions">
+                        <button class="btn btn--primary" id="saveBtn" style="display: none;">
+                            <span class="btn-icon">💾</span>
+                            Сохранить
+                        </button>
+                        <button class="btn btn--secondary" id="previewBtn" style="display: none;">
+                            <span class="btn-icon">👁️</span>
+                            Предпросмотр
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="admin-content">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="content-section content-section--active">
+                    <div class="dashboard-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">👁️</div>
+                            <div class="stat-content">
+                                <h3 class="stat-value">24</h3>
+                                <p class="stat-label">Работ в портфолио</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">💅</div>
+                            <div class="stat-content">
+                                <h3 class="stat-value">8</h3>
+                                <p class="stat-label">Услуг</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">📰</div>
+                            <div class="stat-content">
+                                <h3 class="stat-value">12</h3>
+                                <p class="stat-label">Статей в блоге</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">🎓</div>
+                            <div class="stat-content">
+                                <h3 class="stat-value">3</h3>
+                                <p class="stat-label">Курса обучения</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-actions">
+                        <h3>Быстрые действия</h3>
+                        <div class="actions-grid">
+                            <button class="action-btn" data-action="add-portfolio">
+                                <span class="action-icon">➕</span>
+                                Добавить работу
+                            </button>
+                            <button class="action-btn" data-action="edit-services">
+                                <span class="action-icon">✏️</span>
+                                Редактировать услуги
+                            </button>
+                            <button class="action-btn" data-action="add-blog">
+                                <span class="action-icon">📝</span>
+                                Написать статью
+                            </button>
+                            <button class="action-btn" data-action="edit-contacts">
+                                <span class="action-icon">📞</span>
+                                Изменить контакты
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Content Section -->
+                <section id="content" class="content-section">
+                    <div class="content-editor">
+                        <h3>Редактирование контента</h3>
+                        
+                        <div class="form-group">
+                            <label for="heroTitle">Заголовок главной страницы</label>
+                            <input type="text" id="heroTitle" class="form-input" value="Профессиональное оформление бровей и ламинирование ресниц в Москве">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="heroSubtitle">Подзаголовок главной страницы</label>
+                            <textarea id="heroSubtitle" class="form-textarea" rows="3">Создаю идеальную форму бровей и объемные ресницы для естественной красоты. 5+ лет опыта, индивидуальный подход к каждому клиенту.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="aboutText">О мастере</label>
+                            <textarea id="aboutText" class="form-textarea" rows="6">Мой путь в бьюти-индустрии начался 5 лет назад, когда я впервые попробовала себя в роли мастера по оформлению бровей. С тех пор я постоянно совершенствую свои навыки, изучаю новые техники и материалы.</textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services Section -->
+                <section id="services" class="content-section">
+                    <div class="services-editor">
+                        <h3>Управление услугами</h3>
+                        
+                        <div class="services-list" id="servicesList">
+                            <!-- Услуги будут загружены динамически -->
+                        </div>
+                        
+                        <button class="btn btn--primary" id="addServiceBtn">
+                            <span class="btn-icon">➕</span>
+                            Добавить услугу
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Portfolio Section -->
+                <section id="portfolio" class="content-section">
+                    <div class="portfolio-editor">
+                        <h3>Управление портфолио</h3>
+                        
+                        <div class="upload-area">
+                            <input type="file" id="portfolioUpload" accept="image/*" multiple style="display: none;">
+                            <div class="upload-dropzone" id="uploadDropzone">
+                                <span class="upload-icon">📁</span>
+                                <p>Перетащите изображения сюда или кликните для выбора</p>
+                                <button class="btn btn--outline" onclick="document.getElementById('portfolioUpload').click()">
+                                    Выбрать файлы
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-grid" id="portfolioGrid">
+                            <!-- Работы будут загружены динамически -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Courses Section -->
+                <section id="courses" class="content-section">
+                    <div class="courses-editor">
+                        <h3>Управление курсами</h3>
+                        
+                        <div class="courses-list" id="coursesList">
+                            <!-- Курсы будут загружены динамически -->
+                        </div>
+                        
+                        <button class="btn btn--primary" id="addCourseBtn">
+                            <span class="btn-icon">➕</span>
+                            Добавить курс
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Blog Section -->
+                <section id="blog" class="content-section">
+                    <div class="blog-editor">
+                        <h3>Управление блогом</h3>
+                        
+                        <div class="blog-posts" id="blogPosts">
+                            <!-- Статьи будут загружены динамически -->
+                        </div>
+                        
+                        <button class="btn btn--primary" id="addPostBtn">
+                            <span class="btn-icon">➕</span>
+                            Написать статью
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settings" class="content-section">
+                    <div class="settings-editor">
+                        <h3>Настройки сайта</h3>
+                        
+                        <div class="form-group">
+                            <label for="siteName">Название сайта</label>
+                            <input type="text" id="siteName" class="form-input" value="Beauty Master">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="siteDescription">Описание сайта</label>
+                            <textarea id="siteDescription" class="form-textarea" rows="3">Профессиональное оформление бровей и ламинирование ресниц в Москве</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">Телефон</label>
+                            <input type="tel" id="contactPhone" class="form-input" value="+7 (XXX) XXX-XX-XX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" class="form-input" value="info@beauty-master.ru">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactAddress">Адрес</label>
+                            <textarea id="contactAddress" class="form-textarea" rows="2">Москва, ул. Примерная, д. 123</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="workingHours">Время работы</label>
+                            <textarea id="workingHours" class="form-textarea" rows="3">Понедельник - Пятница: 10:00 - 20:00
+Суббота: 10:00 - 18:00
+Воскресенье: 10:00 - 16:00</textarea>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/admin.js" type="module"></script>
+</body>
+</html>

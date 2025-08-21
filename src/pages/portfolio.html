@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио работ | Оформление бровей и ламинирование ресниц</title>
+    <meta name="description" content="Портфолио работ мастера по бровям и ресницам в Москве. Примеры оформления бровей, ламинирования ресниц, до и после.">
+    <meta name="keywords" content="портфолио брови, работы мастера брови, ламинирование ресниц примеры, до и после брови">
+    <meta name="author" content="Beauty Master">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Портфолио работ - Beauty Master">
+    <meta property="og:description" content="Примеры работ мастера по бровям и ресницам. До и после процедур.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beauty-master.ru/portfolio">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="../styles/main.css">
+    
+    <!-- Структурированные данные -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Портфолио работ Beauty Master",
+      "description": "Примеры работ по оформлению бровей и ламинированию ресниц",
+      "provider": {
+        "@type": "Organization",
+        "name": "Beauty Master"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navigation">
+                <div class="navigation__logo">
+                    <a href="/" class="logo">
+                        <span class="logo__text">Beauty Master</span>
+                    </a>
+                </div>
+                
+                <div class="navigation__menu" id="mainMenu">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="/" class="menu__link">Главная</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/portfolio.html" class="menu__link menu__link--active">Портфолио</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/services.html" class="menu__link">Услуги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/about.html" class="menu__link">О мастере</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/courses.html" class="menu__link">Курсы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/blog.html" class="menu__link">Блог</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/contacts.html" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="navigation__actions">
+                    <a href="tel:+7-XXX-XXX-XXXX" class="phone-link">
+                        <span class="phone-link__icon">📞</span>
+                        <span class="phone-link__text">+7 (XXX) XXX-XX-XX</span>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Открыть меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero--portfolio">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <h1 class="hero__title">
+                            Портфолио моих работ
+                        </h1>
+                        <p class="hero__subtitle">
+                            Примеры оформления бровей и ламинирования ресниц. 
+                            Каждая работа - это индивидуальный подход и внимание к деталям.
+                        </p>
+                        <div class="hero__actions">
+                            <a href="#portfolio" class="btn btn--primary">
+                                Смотреть работы
+                            </a>
+                            <a href="/pages/contacts.html" class="btn btn--secondary">
+                                Записаться на процедуру
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <img src="../images/portfolio/portfolio-hero.svg" alt="Портфолио работ" class="hero__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Filters -->
+        <section class="section section--light">
+            <div class="container">
+                <div class="portfolio-filters">
+                    <div class="filters-header text-center">
+                        <h2 class="filters-header__title">Выберите категорию</h2>
+                        <p class="filters-header__subtitle">
+                            Фильтруйте работы по типу процедуры
+                        </p>
+                    </div>
+                    
+                    <div class="filters-tabs">
+                        <button class="filter-tab filter-tab--active" data-filter="all">
+                            Все работы
+                        </button>
+                        <button class="filter-tab" data-filter="brows">
+                            Оформление бровей
+                        </button>
+                        <button class="filter-tab" data-filter="eyelashes">
+                            Ламинирование ресниц
+                        </button>
+                        <button class="filter-tab" data-filter="before-after">
+                            До и после
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <div class="portfolio-gallery">
+                    <!-- Брови - работа 1 -->
+                    <div class="portfolio-item" data-category="brows">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/brows-1.svg" alt="Оформление бровей - работа 1" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">Классическая форма бровей</h3>
+                            <p class="portfolio-item__description">
+                                Коррекция формы, окрашивание хной, создание естественного изгиба
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">Коррекция</span>
+                                <span class="portfolio-item__tag">Окрашивание</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Брови - работа 2 -->
+                    <div class="portfolio-item" data-category="brows">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/brows-2.svg" alt="Оформление бровей - работа 2" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">Ламинирование бровей</h3>
+                            <p class="portfolio-item__description">
+                                Выпрямление волосков, фиксация формы, долговременный результат
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">Ламинирование</span>
+                                <span class="portfolio-item__tag">Укладка</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Брови - работа 3 -->
+                    <div class="portfolio-item" data-category="brows">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/brows-3.svg" alt="Оформление бровей - работа 3" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">Архитектурные брови</h3>
+                            <p class="portfolio-item__description">
+                                Создание четкой формы, прорисовка хвостика, объемное окрашивание
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">Архитектура</span>
+                                <span class="portfolio-item__tag">Объем</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Брови - работа 4 -->
+                    <div class="portfolio-item" data-category="brows">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/brows-4.svg" alt="Оформление бровей - работа 4" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">Естественные брови</h3>
+                            <p class="portfolio-item__description">
+                                Легкая коррекция, подчеркивание естественной формы, деликатное окрашивание
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">Естественность</span>
+                                <span class="portfolio-item__tag">Легкость</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ресницы - работа 1 -->
+                    <div class="portfolio-item" data-category="eyelashes">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/eyelashes-1.svg" alt="Ламинирование ресниц - работа 1" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">Классическое ламинирование</h3>
+                            <p class="portfolio-item__description">
+                                Выпрямление, завивка, фиксация формы ресниц
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">Ламинирование</span>
+                                <span class="portfolio-item__tag">Завивка</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ресницы - работа 2 -->
+                    <div class="portfolio-item" data-category="eyelashes">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/eyelashes-2.svg" alt="Ламинирование ресниц - работа 2" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">Объемное ламинирование</h3>
+                            <p class="portfolio-item__description">
+                                Создание объема, усиление эффекта, долговременный результат
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">Объем</span>
+                                <span class="portfolio-item__tag">Усиление</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ресницы - работа 3 -->
+                    <div class="portfolio-item" data-category="eyelashes">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/eyelashes-3.svg" alt="Ламинирование ресниц - работа 3" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">L-эффект</h3>
+                            <p class="portfolio-item__description">
+                                Создание L-образного изгиба, удлинение ресниц, естественный вид
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">L-эффект</span>
+                                <span class="portfolio-item__tag">Удлинение</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ресницы - работа 4 -->
+                    <div class="portfolio-item" data-category="eyelashes">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/eyelashes-4.svg" alt="Ламинирование ресниц - работа 4" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">C-эффект</h3>
+                            <p class="portfolio-item__description">
+                                Создание C-образного изгиба, максимальный объем, драматичный эффект
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">C-эффект</span>
+                                <span class="portfolio-item__tag">Драма</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- До и после - брови -->
+                    <div class="portfolio-item portfolio-item--before-after" data-category="before-after">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/before-after-brows.svg" alt="До и после - брови" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">Преображение бровей</h3>
+                            <p class="portfolio-item__description">
+                                До: неопределенная форма. После: четкая архитектура и объем
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">До и после</span>
+                                <span class="portfolio-item__tag">Преображение</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- До и после - ресницы -->
+                    <div class="portfolio-item portfolio-item--before-after" data-category="before-after">
+                        <div class="portfolio-item__image">
+                            <img src="../images/portfolio/before-after-eyelashes.svg" alt="До и после - ресницы" loading="lazy">
+                        </div>
+                        <div class="portfolio-item__overlay">
+                            <h3 class="portfolio-item__title">Преображение ресниц</h3>
+                            <p class="portfolio-item__description">
+                                До: прямые ресницы. После: объемные завитые ресницы
+                            </p>
+                            <div class="portfolio-item__tags">
+                                <span class="portfolio-item__tag">До и после</span>
+                                <span class="portfolio-item__tag">Преображение</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="section section--light">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card__number">500+</div>
+                        <div class="stat-card__label">Довольных клиентов</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card__number">3+</div>
+                        <div class="stat-card__label">Года опыта</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card__number">98%</div>
+                        <div class="stat-card__label">Положительных отзывов</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card__number">1000+</div>
+                        <div class="stat-card__label">Выполненных процедур</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-header__title">Отзывы клиентов</h2>
+                    <p class="section-header__subtitle">
+                        Что говорят о моих работах
+                    </p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__content">
+                            <p class="testimonial-card__text">
+                                "Невероятно довольна результатом! Брови получились идеальной формы, 
+                                очень естественно и красиво. Мастер настоящий профессионал!"
+                            </p>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">
+                                <img src="../images/testimonials/client-1.svg" alt="Клиент 1" class="testimonial-card__img">
+                            </div>
+                            <div class="testimonial-card__info">
+                                <div class="testimonial-card__name">Анна, 28 лет</div>
+                                <div class="testimonial-card__service">Оформление бровей</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__content">
+                            <p class="testimonial-card__text">
+                                "Ламинирование ресниц превзошло все ожидания! Ресницы стали 
+                                объемными и длинными, эффект держится уже 2 месяца."
+                            </p>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">
+                                <img src="../images/testimonials/client-2.svg" alt="Клиент 2" class="testimonial-card__img">
+                            </div>
+                            <div class="testimonial-card__info">
+                                <div class="testimonial-card__name">Мария, 32 года</div>
+                                <div class="testimonial-card__service">Ламинирование ресниц</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__content">
+                            <p class="testimonial-card__text">
+                                "Пришла с проблемными бровями, ушла с идеальными! Мастер 
+                                подобрала идеальную форму под мое лицо. Очень благодарна!"
+                            </p>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">
+                                <img src="../images/testimonials/client-3.svg" alt="Клиент 3" class="testimonial-card__img">
+                            </div>
+                            <div class="testimonial-card__info">
+                                <div class="testimonial-card__name">Елена, 25 лет</div>
+                                <div class="testimonial-card__service">Коррекция бровей</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section--accent">
+            <div class="container">
+                <div class="cta__content text-center">
+                    <h2 class="cta__title">Готовы преобразиться?</h2>
+                    <p class="cta__subtitle">
+                        Запишитесь на процедуру и получите идеальные брови или ресницы
+                    </p>
+                    <div class="cta__actions">
+                        <a href="/pages/contacts.html" class="btn btn--primary btn--large">
+                            Записаться на процедуру
+                        </a>
+                        <a href="tel:+7-XXX-XXX-XXXX" class="btn btn--secondary btn--large">
+                            Позвонить для записи
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Beauty Master</h3>
+                    <p class="footer__description">
+                        Профессиональное оформление бровей и ламинирование ресниц в Москве
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <span class="social-link__icon">📷</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="VK">
+                            <span class="social-link__icon">💬</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <span class="social-link__icon">📱</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Услуги</h4>
+                    <ul class="footer__list">
+                        <li><a href="/pages/services.html#brows">Оформление бровей</a></li>
+                        <li><a href="/pages/services.html#eyelashes">Ламинирование ресниц</a></li>
+                        <li><a href="/pages/courses.html">Курсы по бровям</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Информация</h4>
+                    <ul class="footer__list">
+                        <li><a href="/pages/about.html">О мастере</a></li>
+                        <li><a href="/pages/portfolio.html">Портфолио</a></li>
+                        <li><a href="/pages/blog.html">Блог</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Контакты</h4>
+                    <div class="footer__contact">
+                        <p class="footer__contact-item">
+                            <span class="footer__contact-icon">📍</span>
+                            Москва, ул. Примерная, д. 123
+                        </p>
+                        <p class="footer__contact-item">
+                            <span class="footer__contact-icon">📞</span>
+                            <a href="tel:+7-XXX-XXX-XXXX">+7 (XXX) XXX-XX-XX</a>
+                        </p>
+                        <p class="footer__contact-item">
+                            <span class="footer__contact-icon">✉️</span>
+                            <a href="mailto:info@beauty-master.ru">info@beauty-master.ru</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2024 Beauty Master. Все права защищены.
+                </p>
+                <div class="footer__links">
+                    <a href="/privacy">Политика конфиденциальности</a>
+                    <a href="/terms">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

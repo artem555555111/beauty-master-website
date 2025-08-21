@@ -1,0 +1,133 @@
+// Цветовая палитра
+:root {
+  // Основные цвета
+  --color-primary: #FF6B9D;        // Розовый
+  --color-secondary: #FFB5C2;      // Светло-розовый
+  --color-accent: #E8B4CB;         // Лавандовый
+  --color-success: #A8E6CF;        // Мятный
+  --color-warning: #FFD3B6;        // Персиковый
+  
+  // Нейтральные цвета
+  --color-white: #FFFFFF;
+  --color-light-gray: #F8F9FA;
+  --color-gray: #E9ECEF;
+  --color-dark-gray: #6C757D;
+  --color-black: #2C2C2C;
+  
+  // Текстовые цвета
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-dark-gray);
+  --color-text-light: var(--color-white);
+  
+  // Фоновые цвета
+  --color-bg-primary: var(--color-white);
+  --color-bg-secondary: var(--color-light-gray);
+  --color-bg-accent: var(--color-secondary);
+  
+  // Градиенты
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-accent: linear-gradient(135deg, var(--color-accent), var(--color-warning));
+}
+
+// Типографика
+:root {
+  // Шрифты
+  --font-primary: 'Playfair Display', serif;
+  --font-secondary: 'Inter', sans-serif;
+  --font-accent: 'Dancing Script', cursive;
+  
+  // Размеры шрифтов
+  --font-size-xs: 0.75rem;      // 12px
+  --font-size-sm: 0.875rem;     // 14px
+  --font-size-base: 1rem;       // 16px
+  --font-size-lg: 1.125rem;     // 18px
+  --font-size-xl: 1.25rem;      // 20px
+  --font-size-2xl: 1.5rem;      // 24px
+  --font-size-3xl: 1.875rem;    // 30px
+  --font-size-4xl: 2.25rem;     // 36px
+  --font-size-5xl: 3rem;        // 48px
+  
+  // Высота строк
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  // Веса шрифтов
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+// Размеры и отступы
+:root {
+  // Контейнер
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+  
+  // Отступы секций
+  --section-padding-y: 5rem;
+  --section-padding-y-sm: 3rem;
+  
+  // Отступы элементов
+  --spacing-xs: 0.25rem;        // 4px
+  --spacing-sm: 0.5rem;         // 8px
+  --spacing-md: 1rem;           // 16px
+  --spacing-lg: 1.5rem;         // 24px
+  --spacing-xl: 2rem;           // 32px
+  --spacing-2xl: 3rem;          // 48px
+  --spacing-3xl: 4rem;          // 64px
+  
+  // Радиусы скругления
+  --border-radius-sm: 0.25rem;   // 4px
+  --border-radius-md: 0.5rem;    // 8px
+  --border-radius-lg: 1rem;      // 16px
+  --border-radius-xl: 1.5rem;    // 24px
+  --border-radius-full: 9999px;
+  
+  // Тени
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+// Анимации и переходы
+:root {
+  // Длительности
+  --duration-fast: 0.15s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+  
+  // Функции плавности
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  // Переходы
+  --transition-fast: all var(--duration-fast) var(--ease-out);
+  --transition-normal: all var(--duration-normal) var(--ease-out);
+  --transition-slow: all var(--duration-slow) var(--ease-out);
+}
+
+// Breakpoints для адаптивности
+:root {
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+}
+
+// Z-index слои
+:root {
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}

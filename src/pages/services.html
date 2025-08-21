@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и цены | Оформление бровей и ламинирование ресниц</title>
+    <meta name="description" content="Услуги мастера по бровям и ресницам в Москве. Цены на оформление бровей, ламинирование ресниц, коррекцию формы.">
+    <meta name="keywords" content="услуги брови, цены оформление бровей, ламинирование ресниц стоимость, коррекция бровей цена">
+    <meta name="author" content="Beauty Master">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Услуги и цены - Beauty Master">
+    <meta property="og:description" content="Профессиональные услуги по бровям и ресницам. Доступные цены, качественные материалы.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beauty-master.ru/services">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="../styles/main.css">
+    
+    <!-- Структурированные данные -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Услуги по бровям и ресницам",
+      "description": "Профессиональное оформление бровей и ламинирование ресниц",
+      "provider": {
+        "@type": "Organization",
+        "name": "Beauty Master"
+      },
+      "serviceType": ["Оформление бровей", "Ламинирование ресниц"],
+      "areaServed": "Москва"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navigation">
+                <div class="navigation__logo">
+                    <a href="/" class="logo">
+                        <span class="logo__text">Beauty Master</span>
+                    </a>
+                </div>
+                
+                <div class="navigation__menu" id="mainMenu">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="/" class="menu__link">Главная</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/portfolio.html" class="menu__link">Портфолио</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/services.html" class="menu__link menu__link--active">Услуги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/about.html" class="menu__link">О мастере</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/courses.html" class="menu__link">Курсы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/blog.html" class="menu__link">Блог</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/pages/contacts.html" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="navigation__actions">
+                    <a href="tel:+7-XXX-XXX-XXXX" class="phone-link">
+                        <span class="phone-link__icon">📞</span>
+                        <span class="phone-link__text">+7 (XXX) XXX-XX-XX</span>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Открыть меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero--services">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <h1 class="hero__title">
+                            Услуги и цены
+                        </h1>
+                        <p class="hero__subtitle">
+                            Профессиональные услуги по оформлению бровей и ламинированию ресниц. 
+                            Качественные материалы, доступные цены, гарантированный результат.
+                        </p>
+                        <div class="hero__actions">
+                            <a href="#brows" class="btn btn--primary">
+                                Услуги по бровям
+                            </a>
+                            <a href="#eyelashes" class="btn btn--secondary">
+                                Услуги по ресницам
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <img src="../images/services/services-hero.svg" alt="Услуги и цены" class="hero__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="section section--light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-header__title">Что я предлагаю</h2>
+                    <p class="section-header__subtitle">
+                        Полный спектр услуг для создания идеальных бровей и ресниц
+                    </p>
+                </div>
+                
+                <div class="services-overview">
+                    <div class="service-overview-card">
+                        <div class="service-overview-card__icon">✨</div>
+                        <h3 class="service-overview-card__title">Оформление бровей</h3>
+                        <p class="service-overview-card__description">
+                            Коррекция формы, окрашивание, ламинирование. Создаю идеальную форму под ваш тип лица.
+                        </p>
+                        <div class="service-overview-card__price">
+                            <span class="service-overview-card__price-from">от</span>
+                            <span class="service-overview-card__price-amount">1500₽</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-overview-card">
+                        <div class="service-overview-card__icon">🌟</div>
+                        <h3 class="service-overview-card__title">Ламинирование ресниц</h3>
+                        <p class="service-overview-card__description">
+                            Объемные, завитые ресницы без наращивания. Эффект держится до 2 месяцев.
+                        </p>
+                        <div class="service-overview-card__price">
+                            <span class="service-overview-card__price-from">от</span>
+                            <span class="service-overview-card__price-amount">2500₽</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-overview-card">
+                        <div class="service-overview-card__icon">💎</div>
+                        <h3 class="service-overview-card__title">Комплексные процедуры</h3>
+                        <p class="service-overview-card__description">
+                            Комбинация услуг со скидкой. Экономия времени и денег при отличном результате.
+                        </p>
+                        <div class="service-overview-card__price">
+                            <span class="service-overview-card__price-from">от</span>
+                            <span class="service-overview-card__price-amount">3500₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brows Services -->
+        <section id="brows" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-header__title">Услуги по бровям</h2>
+                    <p class="section-header__subtitle">
+                        Создаю идеальную форму бровей под ваш тип лица
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card service-card--brows">
+                        <div class="service-card__header">
+                            <div class="service-card__icon">✂️</div>
+                            <h3 class="service-card__title">Коррекция бровей</h3>
+                            <div class="service-card__price">1500₽</div>
+                        </div>
+                        
+                        <div class="service-card__content">
+                            <p class="service-card__description">
+                                Придание формы бровям с помощью пинцета или нити. 
+                                Удаление лишних волосков, создание четкого контура.
+                            </p>
+                            
+                            <div class="service-card__details">
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">⏱️</span>
+                                    <span>30 минут</span>
+                                </div>
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">🔄</span>
+                                    <span>Каждые 2-3 недели</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="service-card__features">
+                                <li>Анализ формы лица</li>
+                                <li>Коррекция пинцетом или нитью</li>
+                                <li>Создание четкого контура</li>
+                                <li>Рекомендации по уходу</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card service-card--brows">
+                        <div class="service-card__header">
+                            <div class="service-card__icon">🎨</div>
+                            <h3 class="service-card__title">Окрашивание бровей</h3>
+                            <div class="service-card__price">2000₽</div>
+                        </div>
+                        
+                        <div class="service-card__content">
+                            <p class="service-card__description">
+                                Окрашивание бровей краской или хной. Подбор идеального оттенка под ваш цвет волос.
+                            </p>
+                            
+                            <div class="service-card__details">
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">⏱️</span>
+                                    <span>45 минут</span>
+                                </div>
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">🔄</span>
+                                    <span>Каждые 3-4 недели</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="service-card__features">
+                                <li>Подбор цвета</li>
+                                <li>Окрашивание краской или хной</li>
+                                <li>Фиксация цвета</li>
+                                <li>Уход за окрашенными бровями</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card service-card--brows service-card--popular">
+                        <div class="service-card__header">
+                            <div class="service-card__badge">Популярно</div>
+                            <div class="service-card__icon">✨</div>
+                            <h3 class="service-card__title">Коррекция + Окрашивание</h3>
+                            <div class="service-card__price">3000₽</div>
+                        </div>
+                        
+                        <div class="service-card__content">
+                            <p class="service-card__description">
+                                Комплексная процедура: коррекция формы и окрашивание бровей. 
+                                Максимальный результат за одно посещение.
+                            </p>
+                            
+                            <div class="service-card__details">
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">⏱️</span>
+                                    <span>60 минут</span>
+                                </div>
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">🔄</span>
+                                    <span>Каждые 3-4 недели</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="service-card__features">
+                                <li>Анализ формы лица</li>
+                                <li>Коррекция формы</li>
+                                <li>Подбор и нанесение цвета</li>
+                                <li>Фиксация результата</li>
+                                <li>Рекомендации по уходу</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card service-card--brows">
+                        <div class="service-card__header">
+                            <div class="service-card__icon">🔒</div>
+                            <h3 class="service-card__title">Ламинирование бровей</h3>
+                            <div class="service-card__price">3500₽</div>
+                        </div>
+                        
+                        <div class="service-card__content">
+                            <p class="service-card__description">
+                                Выпрямление и фиксация волосков бровей. Долговременный результат до 6 недель.
+                            </p>
+                            
+                            <div class="service-card__details">
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">⏱️</span>
+                                    <span>75 минут</span>
+                                </div>
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">🔄</span>
+                                    <span>Каждые 6-8 недель</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="service-card__features">
+                                <li>Очищение бровей</li>
+                                <li>Нанесение состава</li>
+                                <li>Фиксация формы</li>
+                                <li>Увлажнение и питание</li>
+                                <li>Инструкция по уходу</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eyelashes Services -->
+        <section id="eyelashes" class="section section--light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-header__title">Услуги по ресницам</h2>
+                    <p class="section-header__subtitle">
+                        Объемные и завитые ресницы без наращивания
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card service-card--eyelashes">
+                        <div class="service-card__header">
+                            <div class="service-card__icon">🌟</div>
+                            <h3 class="service-card__title">Классическое ламинирование</h3>
+                            <div class="service-card__price">2500₽</div>
+                        </div>
+                        
+                        <div class="service-card__content">
+                            <p class="service-card__description">
+                                Базовое ламинирование ресниц с естественным завитком. 
+                                Подходит для всех типов ресниц.
+                            </p>
+                            
+                            <div class="service-card__details">
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">⏱️</span>
+                                    <span>60 минут</span>
+                                </div>
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">🔄</span>
+                                    <span>Каждые 6-8 недель</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="service-card__features">
+                                <li>Очищение ресниц</li>
+                                <li>Нанесение состава</li>
+                                <li>Естественный завиток</li>
+                                <li>Фиксация результата</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card service-card--eyelashes service-card--popular">
+                        <div class="service-card__header">
+                            <div class="service-card__badge">Популярно</div>
+                            <div class="service-card__icon">💎</div>
+                            <h3 class="service-card__title">L-эффект</h3>
+                            <div class="service-card__price">3000₽</div>
+                        </div>
+                        
+                        <div class="service-card__content">
+                            <p class="service-card__description">
+                                Создание L-образного изгиба ресниц. Удлинение и объем 
+                                с естественным результатом.
+                            </p>
+                            
+                            <div class="service-card__details">
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">⏱️</span>
+                                    <span>75 минут</span>
+                                </div>
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">🔄</span>
+                                    <span>Каждые 6-8 недель</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="service-card__features">
+                                <li>Очищение ресниц</li>
+                                <li>Создание L-изгиба</li>
+                                <li>Удлинение эффект</li>
+                                <li>Фиксация результата</li>
+                                <li>Уход за ресницами</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card service-card--eyelashes">
+                        <div class="service-card__header">
+                            <div class="service-card__icon">🔥</div>
+                            <h3 class="service-card__title">C-эффект</h3>
+                            <div class="service-card__price">3500₽</div>
+                        </div>
+                        
+                        <div class="service-card__content">
+                            <p class="service-card__description">
+                                Максимальный объем и драматичный эффект. 
+                                C-образный завиток для яркого образа.
+                            </p>
+                            
+                            <div class="service-card__details">
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">⏱️</span>
+                                    <span>90 минут</span>
+                                </div>
+                                <div class="service-card__detail">
+                                    <span class="service-card__detail-icon">🔄</span>
+                                    <span>Каждые 6-8 недель</span>
+                                </div>
+                            </div>
+                            
+                            <ul class="service-card__features">
+                                <li>Очищение ресниц</li>
+                                <li>Создание C-изгиба</li>
+                                <li>Максимальный объем</li>
+                                <li>Драматичный эффект</li>
+                                <li>Долговременная фиксация</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Complex Services -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-header__title">Комплексные процедуры</h2>
+                    <p class="section-header__subtitle">
+                        Экономия времени и денег при отличном результате
+                    </p>
+                </div>
+                
+                <div class="complex-services-grid">
+                    <div class="complex-service-card complex-service-card--premium">
+                        <div class="complex-service-card__header">
+                            <div class="complex-service-card__badge">Премиум</div>
+                            <h3 class="complex-service-card__title">Полный образ</h3>
+                            <div class="complex-service-card__price">
+                                <span class="complex-service-card__price-old">6500₽</span>
+                                <span class="complex-service-card__price-new">5500₽</span>
+                            </div>
+                        </div>
+                        
+                        <div class="complex-service-card__content">
+                            <p class="complex-service-card__description">
+                                Комплексная процедура для создания идеального образа: 
+                                брови + ресницы в одном посещении.
+                            </p>
+                            
+                            <div class="complex-service-card__services">
+                                <h4>Входит в комплекс:</h4>
+                                <ul>
+                                    <li>Коррекция + окрашивание бровей</li>
+                                    <li>Ламинирование ресниц (L-эффект)</li>
+                                    <li>Консультация по уходу</li>
+                                    <li>Скидка 15%</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="complex-service-card__duration">
+                                <span class="complex-service-card__duration-icon">⏱️</span>
+                                <span>2-2.5 часа</span>
+                            </div>
+                        </div>
+                        
+                        <div class="complex-service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться на комплекс
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="complex-service-card">
+                        <div class="complex-service-card__header">
+                            <div class="complex-service-card__badge">Выгодно</div>
+                            <h3 class="complex-service-card__title">Брови + Ресницы</h3>
+                            <div class="complex-service-card__price">
+                                <span class="complex-service-card__price-old">5000₽</span>
+                                <span class="complex-service-card__price-new">4200₽</span>
+                            </div>
+                        </div>
+                        
+                        <div class="complex-service-card__content">
+                            <p class="complex-service-card__description">
+                                Базовый комплекс: коррекция бровей + классическое ламинирование ресниц.
+                            </p>
+                            
+                            <div class="complex-service-card__services">
+                                <h4>Входит в комплекс:</h4>
+                                <ul>
+                                    <li>Коррекция бровей</li>
+                                    <li>Классическое ламинирование ресниц</li>
+                                    <li>Базовые рекомендации</li>
+                                    <li>Скидка 16%</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="complex-service-card__duration">
+                                <span class="complex-service-card__duration-icon">⏱️</span>
+                                <span>1.5-2 часа</span>
+                            </div>
+                        </div>
+                        
+                        <div class="complex-service-card__footer">
+                            <a href="/pages/contacts.html" class="btn btn--primary btn--full-width">
+                                Записаться на комплекс
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials Section -->
+        <section class="section section--light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-header__title">Материалы и качество</h2>
+                    <p class="section-header__subtitle">
+                        Использую только проверенные материалы премиум-класса
+                    </p>
+                </div>
+                
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <div class="material-card__icon">🇮🇹</div>
+                        <h3 class="material-card__title">Итальянские составы</h3>
+                        <p class="material-card__description">
+                            Профессиональные составы для ламинирования от ведущих итальянских брендов.
+                        </p>
+                    </div>
+                    
+                    <div class="material-card">
+                        <div class="material-card__icon">🇩🇪</div>
+                        <h3 class="material-card__title">Немецкие краски</h3>
+                        <p class="material-card__description">
+                            Гипоаллергенные краски для бровей с богатой палитрой оттенков.
+                        </p>
+                    </div>
+                    
+                    <div class="material-card">
+                        <div class="material-card__icon">🇮🇳</div>
+                        <h3 class="material-card__title">Натуральная хна</h3>
+                        <p class="material-card__description">
+                            Качественная хна для окрашивания бровей с длительным эффектом.
+                        </p>
+                    </div>
+                    
+                    <div class="material-card">
+                        <div class="material-card__icon">🧴</div>
+                        <h3 class="material-card__title">Уходовые средства</h3>
+                        <p class="material-card__description">
+                            Профессиональные средства для ухода за бровями и ресницами.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-header__title">Часто задаваемые вопросы</h2>
+                    <p class="section-header__subtitle">
+                        Ответы на популярные вопросы об услугах
+                    </p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Как долго держится результат ламинирования?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Результат ламинирования бровей держится 6-8 недель, ресниц - 6-8 недель. Продолжительность зависит от индивидуальных особенностей и ухода.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Можно ли делать процедуры во время беременности?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Перед процедурами во время беременности необходима консультация с врачом. В большинстве случаев процедуры безопасны, но лучше проконсультироваться.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Как подготовиться к процедуре?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>За 24 часа до процедуры не используйте масла и жирные кремы. Приходите без макияжа на глазах. Длительность процедуры 1-2.5 часа в зависимости от выбранного комплекса.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Есть ли противопоказания?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Основные противопоказания: аллергия на компоненты, воспалительные процессы, свежие раны, индивидуальная непереносимость. Перед процедурой проводится тест на аллергию.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section--accent">
+            <div class="container">
+                <div class="cta__content text-center">
+                    <h2 class="cta__title">Готовы преобразиться?</h2>
+                    <p class="cta__subtitle">
+                        Запишитесь на процедуру и получите скидку 10% на первое посещение
+                    </p>
+                    <div class="cta__actions">
+                        <a href="/pages/contacts.html" class="btn btn--primary btn--large">
+                            Записаться на процедуру
+                        </a>
+                        <a href="tel:+7-XXX-XXX-XXXX" class="btn btn--secondary btn--large">
+                            Позвонить для записи
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Beauty Master</h3>
+                    <p class="footer__description">
+                        Профессиональное оформление бровей и ламинирование ресниц в Москве
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <span class="social-link__icon">📷</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="VK">
+                            <span class="social-link__icon">💬</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <span class="social-link__icon">📱</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Услуги</h4>
+                    <ul class="footer__list">
+                        <li><a href="/pages/services.html#brows">Оформление бровей</a></li>
+                        <li><a href="/pages/services.html#eyelashes">Ламинирование ресниц</a></li>
+                        <li><a href="/pages/courses.html">Курсы по бровям</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Информация</h4>
+                    <ul class="footer__list">
+                        <li><a href="/pages/about.html">О мастере</a></li>
+                        <li><a href="/pages/portfolio.html">Портфолио</a></li>
+                        <li><a href="/pages/blog.html">Блог</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Контакты</h4>
+                    <div class="footer__contact">
+                        <p class="footer__contact-item">
+                            <span class="footer__contact-icon">📍</span>
+                            Москва, ул. Примерная, д. 123
+                        </p>
+                        <p class="footer__contact-item">
+                            <span class="footer__contact-icon">📞</span>
+                            <a href="tel:+7-XXX-XXX-XXXX">+7 (XXX) XXX-XX-XX</a>
+                        </p>
+                        <p class="footer__contact-item">
+                            <span class="footer__contact-icon">✉️</span>
+                            <a href="mailto:info@beauty-master.ru">info@beauty-master.ru</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2024 Beauty Master. Все права защищены.
+                </p>
+                <div class="footer__links">
+                    <a href="/privacy">Политика конфиденциальности</a>
+                    <a href="/terms">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

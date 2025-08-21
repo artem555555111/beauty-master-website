@@ -1,0 +1,476 @@
+// Базовые grid утилиты
+.container {
+  @include container;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--container-padding);
+}
+
+// Grid система
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid--2 {
+  @include grid-2;
+}
+
+.grid--3 {
+  @include grid-3;
+}
+
+.grid--4 {
+  @include grid-4;
+}
+
+// Адаптивные grid классы
+.grid--responsive {
+  display: grid;
+  gap: var(--spacing-lg);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+  }
+}
+
+.grid--auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.grid--auto-fill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+// Специальные grid макеты
+.grid--hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+}
+
+.grid--services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+.grid--portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+  }
+}
+
+.grid--testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+.grid--blog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+.grid--footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+// Masonry grid для портфолио
+.grid--masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 0;
+  grid-auto-flow: dense;
+  gap: var(--spacing-md);
+  
+  .portfolio-item {
+    &:nth-child(3n + 1) {
+      grid-row: span 2;
+    }
+    
+    &:nth-child(4n + 2) {
+      grid-column: span 2;
+    }
+    
+    &:nth-child(5n + 3) {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+  }
+  
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    
+    .portfolio-item {
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+  }
+}
+
+// Grid для форм
+.grid--form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  
+  .form-group--full {
+    grid-column: span 2;
+  }
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    
+    .form-group--full {
+      grid-column: span 1;
+    }
+  }
+}
+
+// Grid для карточек
+.grid--cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+// Grid для навигации
+.grid--nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--spacing-lg);
+  align-items: center;
+  
+  @include mobile {
+    grid-template-columns: auto auto;
+    
+    .nav-menu {
+      grid-column: span 2;
+      grid-row: 2;
+    }
+  }
+}
+
+// Grid для header
+.grid--header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--spacing-lg);
+  align-items: center;
+  
+  @include mobile {
+    grid-template-columns: auto auto;
+    
+    .header-menu {
+      grid-column: span 2;
+      grid-row: 2;
+    }
+  }
+}
+
+// Grid для sidebar layout
+.grid--sidebar {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+// Grid для admin panel
+.grid--admin {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Grid для статистики
+.grid--stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+// Grid для действий
+.grid--actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}
+
+// Grid для фильтров
+.grid--filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-md);
+  
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+}
+
+// Grid для галереи
+.grid--gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+  
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+// Grid для списков
+.grid--list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.grid--list--2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+// Grid для таблиц
+.grid--table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-sm);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+  }
+}
+
+// Grid для timeline
+.grid--timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-primary);
+    
+    @include mobile {
+      left: 15px;
+    }
+  }
+}
+
+// Grid для steps
+.grid--steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+// Grid для pricing
+.grid--pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+// Grid для team
+.grid--team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+  }
+  
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-2xl);
+  }
+}
+
+// Grid для features
+.grid--features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+// Grid для comparison
+.grid--comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+// Grid для FAQ
+.grid--faq {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+// Grid для contact info
+.grid--contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+// Grid для map
+.grid--map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}

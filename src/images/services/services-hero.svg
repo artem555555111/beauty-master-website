@@ -1,0 +1,86 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradServices" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A8E6CF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB5C2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#gradServices)"/>
+  
+  <!-- Иконка услуг -->
+  <g transform="translate(150, 100)">
+    <!-- Инструменты -->
+    <g transform="translate(0, 0)">
+      <!-- Пинцет -->
+      <rect x="0" y="0" width="8" height="60" rx="4" fill="#8B4513" opacity="0.8"/>
+      <rect x="-2" y="0" width="12" height="8" rx="4" fill="#8B4513" opacity="0.8"/>
+      
+      <!-- Кисть -->
+      <rect x="20" y="10" width="6" height="50" rx="3" fill="#8B4513" opacity="0.8"/>
+      <rect x="15" y="0" width="16" height="20" rx="8" fill="#FF6B9D" opacity="0.8"/>
+      
+      <!-- Ножницы -->
+      <rect x="40" y="0" width="4" height="40" rx="2" fill="#8B4513" opacity="0.8"/>
+      <rect x="44" y="0" width="4" height="40" rx="2" fill="#8B4513" opacity="0.8"/>
+      <rect x="38" y="0" width="12" height="8" rx="4" fill="#8B4513" opacity="0.8"/>
+    </g>
+    
+    <!-- Материалы -->
+    <g transform="translate(80, 0)">
+      <!-- Краска -->
+      <rect x="0" y="20" width="30" height="40" rx="5" fill="#FF6B9D" opacity="0.9"/>
+      <rect x="5" y="25" width="20" height="30" rx="3" fill="#FFFFFF" opacity="0.8"/>
+      
+      <!-- Хна -->
+      <rect x="40" y="30" width="25" height="30" rx="5" fill="#8B4513" opacity="0.8"/>
+      <rect x="45" y="35" width="15" height="20" rx="3" fill="#D2691E" opacity="0.9"/>
+    </g>
+    
+    <!-- Составы для ламинирования -->
+    <g transform="translate(120, 10)">
+      <!-- Флакон 1 -->
+      <rect x="0" y="0" width="20" height="50" rx="10" fill="#A8E6CF" opacity="0.9"/>
+      <rect x="5" y="5" width="10" height="40" rx="5" fill="#FFFFFF" opacity="0.7"/>
+      
+      <!-- Флакон 2 -->
+      <rect x="30" y="10" width="18" height="40" rx="9" fill="#FFB5C2" opacity="0.9"/>
+      <rect x="35" y="15" width="8" height="30" rx="4" fill="#FFFFFF" opacity="0.7"/>
+      
+      <!-- Флакон 3 -->
+      <rect x="60" y="5" width="22" height="45" rx="11" fill="#E8B4CB" opacity="0.9"/>
+      <rect x="65" y="10" width="12" height="35" rx="6" fill="#FFFFFF" opacity="0.7"/>
+    </g>
+  </g>
+  
+  <!-- Иконки бровей и ресниц -->
+  <g transform="translate(200, 300)">
+    <!-- Брови -->
+    <path d="M-40 0 Q-30 -20 -20 0 Q-30 20 -40 0" fill="#8B4513" opacity="0.8"/>
+    <path d="M20 0 Q30 -20 40 0 Q30 20 20 0" fill="#8B4513" opacity="0.8"/>
+    
+    <!-- Ресницы -->
+    <g transform="translate(0, 30)">
+      <path d="M-30 0 Q-20 -15 -10 0 Q-20 15 -30 0" fill="#8B4513" opacity="0.6"/>
+      <path d="M10 0 Q20 -15 30 0 Q20 15 10 0" fill="#8B4513" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <!-- Ценники -->
+  <g transform="translate(100, 400)">
+    <!-- Ценник 1 -->
+    <rect x="0" y="0" width="60" height="30" rx="5" fill="#FFFFFF" opacity="0.9"/>
+    <text x="30" y="20" font-family="Arial, sans-serif" font-size="12" fill="#FF6B9D" text-anchor="middle" font-weight="bold">1500₽</text>
+    
+    <!-- Ценник 2 -->
+    <rect x="80" y="0" width="60" height="30" rx="5" fill="#FFFFFF" opacity="0.9"/>
+    <text x="110" y="20" font-family="Arial, sans-serif" font-size="12" fill="#FF6B9D" text-anchor="middle" font-weight="bold">2500₽</text>
+    
+    <!-- Ценник 3 -->
+    <rect x="160" y="0" width="60" height="30" rx="5" fill="#FFFFFF" opacity="0.9"/>
+    <text x="190" y="20" font-family="Arial, sans-serif" font-size="12" fill="#FF6B9D" text-anchor="middle" font-weight="bold">3500₽</text>
+  </g>
+  
+  <!-- Текст -->
+  <text x="50%" y="480" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">Услуги и цены</text>
+  <text x="50%" y="500" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">500x500px</text>
+</svg>

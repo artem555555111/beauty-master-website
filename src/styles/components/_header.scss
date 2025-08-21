@@ -1,0 +1,223 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 107, 157, 0.1);
+  transition: var(--transition-normal);
+  
+  &.header--scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.navigation {
+  @include flex-between;
+  padding: var(--spacing-md) 0;
+  
+  @include mobile {
+    padding: var(--spacing-sm) 0;
+  }
+}
+
+.navigation__logo {
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  
+  &__text {
+    font-family: var(--font-accent);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.navigation__menu {
+  @include desktop {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @include mobile {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-primary);
+    border-top: 1px solid var(--color-gray);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-normal);
+    
+    &.menu--open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.menu {
+  @include desktop {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-xl);
+  }
+  
+  @include mobile {
+    list-style: none;
+    padding: var(--spacing-lg);
+  }
+}
+
+.menu__item {
+  @include mobile {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+.menu__link {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+  position: relative;
+  
+  &:hover {
+    color: var(--color-primary);
+    background: rgba(255, 107, 157, 0.1);
+  }
+  
+  &.menu__link--active {
+    color: var(--color-primary);
+    background: rgba(255, 107, 157, 0.1);
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background: var(--color-primary);
+      border-radius: var(--border-radius-full);
+    }
+  }
+}
+
+.navigation__actions {
+  @include flex-center;
+  gap: var(--spacing-md);
+  
+  @include mobile {
+    gap: var(--spacing-sm);
+  }
+}
+
+.phone-link {
+  @include flex-center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+  
+  &:hover {
+    background: rgba(255, 107, 157, 0.1);
+    color: var(--color-primary);
+  }
+  
+  @include mobile {
+    display: none;
+  }
+  
+  &__icon {
+    font-size: var(--font-size-lg);
+  }
+  
+  &__text {
+    font-size: var(--font-size-sm);
+  }
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  
+  @include mobile {
+    display: flex;
+  }
+  
+  span {
+    width: 100%;
+    height: 2px;
+    background: var(--color-text-primary);
+    border-radius: var(--border-radius-full);
+    transition: var(--transition-fast);
+  }
+  
+  &.active {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+
+// Анимация появления header при скролле
+.header--hidden {
+  transform: translateY(-100%);
+}
+
+// Адаптивность для планшетов
+@include tablet {
+  .navigation {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .menu {
+    gap: var(--spacing-lg);
+  }
+  
+  .phone-link__text {
+    display: none;
+  }
+}
