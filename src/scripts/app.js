@@ -422,9 +422,9 @@ function initPortfolio() {
     }
     
     // Модальные окна портфолио
-    const portfolioItems = document.querySelectorAll('.portfolio-item[onclick*="openPortfolioModal"]');
+    const portfolioModalItems = document.querySelectorAll('.portfolio-item[onclick*="openPortfolioModal"]');
     
-    portfolioItems.forEach((item, index) => {
+    portfolioModalItems.forEach((item, index) => {
         item.addEventListener('click', () => {
             openPortfolioModal(index);
         });
