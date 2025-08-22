@@ -19,7 +19,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "src/styles/utilities/_variables.scss";`
+        // Переменные импортируются в main.scss
       }
     }
   }

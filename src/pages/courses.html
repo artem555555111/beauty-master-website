@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Стили -->
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/main.scss">
     
     <!-- Структурированные данные -->
     <script type="application/ld+json">
@@ -45,44 +45,20 @@
     <header class="header">
         <div class="container">
             <nav class="navigation">
-                <div class="navigation__logo">
-                    <a href="/" class="logo">
-                        <span class="logo__text">Beauty Master</span>
-                    </a>
-                </div>
+                <a href="../index.html" class="logo">Beauty Master</a>
                 
-                <div class="navigation__menu" id="mainMenu">
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a href="/" class="menu__link">Главная</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="/pages/portfolio.html" class="menu__link">Портфолио</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="/pages/services.html" class="menu__link">Услуги</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="/pages/about.html" class="menu__link">О мастере</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="/pages/courses.html" class="menu__link menu__link--active">Курсы</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="/pages/blog.html" class="menu__link">Блог</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="/pages/contacts.html" class="menu__link">Контакты</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="menu">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="#about">О мастере</a></li>
+                    <li><a href="courses.html" class="active">Курсы</a></li>
+                    <li><a href="#blog">Блог</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
                 
                 <div class="navigation__actions">
-                    <a href="tel:+7-XXX-XXX-XXXX" class="phone-link">
-                        <span class="phone-link__icon">📞</span>
-                        <span class="phone-link__text">+7 (XXX) XXX-XX-XX</span>
-                    </a>
-                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Открыть меню">
+                    <button class="mobile-menu-toggle">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -94,29 +70,39 @@
 
     <!-- Main Content -->
     <main class="main">
+        <!-- Плавающие декоративные элементы -->
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        
+        <!-- Геометрические фигуры -->
+        <div class="geometric-shape geometric-shape--circle" style="top: 15%; right: 5%;"></div>
+        <div class="geometric-shape geometric-shape--square" style="bottom: 20%; left: 10%;"></div>
+        <div class="geometric-shape geometric-shape--triangle" style="top: 40%; left: 5%;"></div>
+        
         <!-- Hero Section -->
         <section class="hero hero--courses">
             <div class="container">
                 <div class="hero__content">
                     <div class="hero__text">
-                        <h1 class="hero__title">
+                        <h1 class="hero__title text-gradient animate-slide-left delay-200">
                             Курсы по оформлению бровей
                         </h1>
-                        <p class="hero__subtitle">
+                        <p class="hero__subtitle animate-slide-left delay-400">
                             Станьте профессиональным мастером по бровям! Обучение с нуля, 
                             практические занятия, индивидуальный подход. Получите сертификат и начните зарабатывать.
                         </p>
-                        <div class="hero__actions">
-                            <a href="#courses" class="btn btn--primary">
+                        <div class="hero__actions animate-slide-left delay-600">
+                            <a href="#courses" class="btn btn-primary btn-lg hover-lift">
                                 Выбрать курс
                             </a>
-                            <a href="#contact" class="btn btn--secondary">
+                            <a href="#contact" class="btn btn-secondary btn-lg hover-lift">
                                 Записаться на обучение
                             </a>
                         </div>
                     </div>
                     <div class="hero__image">
-                        <img src="../images/courses/courses-hero.svg" alt="Курсы по бровям" class="hero__img">
+                        <img src="../images/courses/courses-hero.svg" alt="Курсы по бровям" class="hero__img animate-slide-right delay-300">
                     </div>
                 </div>
             </div>
@@ -126,8 +112,8 @@
         <section id="courses" class="section">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-header__title">Программы обучения</h2>
-                    <p class="section-header__subtitle">
+                    <h2 class="section-header__title text-gradient animate-fade-up">Программы обучения</h2>
+                    <p class="section-header__subtitle animate-fade-up delay-200">
                         Выберите подходящий курс и начните свой путь в профессии мастера по бровям
                     </p>
                 </div>
@@ -173,7 +159,7 @@
                         </div>
                         
                         <div class="course-card__footer">
-                            <a href="#contact" class="btn btn--primary btn--full-width">
+                            <a href="#contact" class="btn btn-primary btn-full hover-lift">
                                 Записаться на курс
                             </a>
                         </div>
@@ -221,7 +207,7 @@
                         </div>
                         
                         <div class="course-card__footer">
-                            <a href="#contact" class="btn btn--primary btn--full-width">
+                            <a href="#contact" class="btn btn-primary btn-full hover-lift">
                                 Записаться на курс
                             </a>
                         </div>
@@ -268,7 +254,7 @@
                         </div>
                         
                         <div class="course-card__footer">
-                            <a href="#contact" class="btn btn--primary btn--full-width">
+                            <a href="#contact" class="btn btn-primary btn-full hover-lift">
                                 Записаться на курс
                             </a>
                         </div>
@@ -281,14 +267,14 @@
         <section class="section section--light">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-header__title">Почему выбирают наши курсы</h2>
-                    <p class="section-header__subtitle">
+                    <h2 class="section-header__title text-gradient animate-fade-up">Почему выбирают наши курсы</h2>
+                    <p class="section-header__subtitle animate-fade-up delay-200">
                         Уникальный подход к обучению и гарантированный результат
                     </p>
                 </div>
                 
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card hover-lift animate-fade-up delay-100">
                         <div class="feature-card__icon">👩‍🏫</div>
                         <h3 class="feature-card__title">Опытный преподаватель</h3>
                         <p class="feature-card__description">
@@ -297,7 +283,7 @@
                         </p>
                     </div>
                     
-                    <div class="feature-card">
+                    <div class="feature-card hover-lift animate-fade-up delay-200">
                         <div class="feature-card__icon">🔬</div>
                         <h3 class="feature-card__title">Практические занятия</h3>
                         <p class="feature-card__description">
@@ -306,7 +292,7 @@
                         </p>
                     </div>
                     
-                    <div class="feature-card">
+                    <div class="feature-card hover-lift animate-fade-up delay-300">
                         <div class="feature-card__icon">📚</div>
                         <h3 class="feature-card__title">Современные методики</h3>
                         <p class="feature-card__description">
@@ -315,7 +301,7 @@
                         </p>
                     </div>
                     
-                    <div class="feature-card">
+                    <div class="feature-card hover-lift animate-fade-up delay-400">
                         <div class="feature-card__icon">🎯</div>
                         <h3 class="feature-card__title">Гарантированный результат</h3>
                         <p class="feature-card__description">
@@ -324,7 +310,7 @@
                         </p>
                     </div>
                     
-                    <div class="feature-card">
+                    <div class="feature-card hover-lift animate-fade-up delay-500">
                         <div class="feature-card__icon">💼</div>
                         <h3 class="feature-card__title">Помощь в трудоустройстве</h3>
                         <p class="feature-card__description">
@@ -333,7 +319,7 @@
                         </p>
                     </div>
                     
-                    <div class="feature-card">
+                    <div class="feature-card hover-lift animate-fade-up delay-600">
                         <div class="feature-card__icon">🤝</div>
                         <h3 class="feature-card__title">Поддержка после обучения</h3>
                         <p class="feature-card__description">
@@ -598,6 +584,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../scripts/main.js"></script>
+    <script src="../scripts/app.js"></script>
 </body>
 </html>
