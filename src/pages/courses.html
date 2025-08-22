@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы по бровям в Москве | Обучение оформлению бровей</title>
-    <meta name="description" content="Профессиональные курсы по оформлению бровей в Москве. Обучение с нуля, практические занятия, сертификат. Запись на курсы онлайн.">
-    <meta name="keywords" content="курсы по бровям москва, обучение оформлению бровей, курсы бровиста, мастер по бровям обучение">
+    <title>Курсы по бровям и ресницам - Beauty Master | Обучение с нуля в Москве</title>
+    <meta name="description" content="Профессиональные курсы по бровям и ресницам в Москве. Обучение с нуля, практические занятия, сертификат. Выберите подходящий курс!">
+    <meta name="keywords" content="курсы по бровям москва, обучение ламинированию ресниц, курсы бровиста, наращивание ресниц обучение, мастер по бровям курсы">
     <meta name="author" content="Beauty Master">
+    <meta name="robots" content="index, follow">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Курсы по бровям в Москве">
-    <meta property="og:description" content="Профессиональные курсы по оформлению бровей. Обучение с нуля, практические занятия, сертификат.">
+    <meta property="og:title" content="Курсы по бровям и ресницам - Beauty Master">
+    <meta property="og:description" content="Профессиональные курсы по бровям и ресницам. Обучение с нуля, практика, сертификат.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://beauty-master.ru/courses">
+    <meta property="og:url" content="https://artem555555111.github.io/beauty-master-website/pages/courses.html">
+    <meta property="og:image" content="https://artem555555111.github.io/beauty-master-website/images/courses/courses-hero.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Курсы по бровям и ресницам - Beauty Master">
+    <meta name="twitter:description" content="Профессиональные курсы по бровям и ресницам. Обучение с нуля, практика, сертификат.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
     <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,38 +37,92 @@
     {
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "Курсы по оформлению бровей",
-      "description": "Профессиональные курсы по оформлению бровей для начинающих мастеров",
+      "name": "Курсы по бровям и ресницам",
+      "description": "Профессиональное обучение макияжу бровей и ресниц с нуля",
       "provider": {
         "@type": "Organization",
-        "name": "Beauty Master"
+        "name": "Beauty Master",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        }
       },
-      "courseMode": "In Person",
-      "educationalLevel": "Beginner",
+      "courseMode": "in-person",
+      "educationalLevel": "beginner",
       "inLanguage": "ru",
-      "teaches": "Оформление бровей, коррекция формы, окрашивание, ламинирование"
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Основы оформления бровей",
+          "price": "25000",
+          "priceCurrency": "RUB"
+        },
+        {
+          "@type": "Offer",
+          "name": "Продвинутые техники",
+          "price": "35000",
+          "priceCurrency": "RUB"
+        },
+        {
+          "@type": "Offer",
+          "name": "Индивидуальное обучение",
+          "price": "50000",
+          "priceCurrency": "RUB"
+        }
+      ]
     }
     </script>
 </head>
 <body>
+    <!-- Плавающие декоративные элементы -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    
+    <!-- Геометрические фигуры -->
+    <div class="geometric-shape geometric-shape--circle" style="top: 15%; right: 5%;"></div>
+    <div class="geometric-shape geometric-shape--square" style="bottom: 20%; left: 10%;"></div>
+    <div class="geometric-shape geometric-shape--triangle" style="top: 40%; left: 5%;"></div>
+    
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="navigation">
-                <a href="../index.html" class="logo">Beauty Master</a>
+                <a href="../index.html" class="logo" aria-label="Beauty Master - Главная страница">
+                    <span class="logo__text">Beauty Master</span>
+                </a>
                 
-                <ul class="menu">
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="portfolio.html">Портфолио</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="#about">О мастере</a></li>
-                    <li><a href="courses.html" class="active">Курсы</a></li>
-                    <li><a href="#blog">Блог</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                <ul class="menu" id="mainMenu" role="menubar">
+                    <li role="none">
+                        <a href="../index.html#hero" class="menu__link" role="menuitem">Главная</a>
+                    </li>
+                    <li role="none">
+                        <a href="../index.html#services" class="menu__link" role="menuitem">Услуги</a>
+                    </li>
+                    <li role="none">
+                        <a href="#courses" class="menu__link menu__link--active" role="menuitem">Курсы</a>
+                    </li>
+                    <li role="none">
+                        <a href="../index.html#portfolio" class="menu__link" role="menuitem">Портфолио</a>
+                    </li>
+                    <li role="none">
+                        <a href="../index.html#reviews" class="menu__link" role="menuitem">Отзывы</a>
+                    </li>
+                    <li role="none">
+                        <a href="../index.html#about" class="menu__link" role="menuitem">О мастере</a>
+                    </li>
+                    <li role="none">
+                        <a href="../index.html#contact" class="menu__link" role="menuitem">Контакты</a>
+                    </li>
                 </ul>
                 
                 <div class="navigation__actions">
-                    <button class="mobile-menu-toggle">
+                    <a href="tel:+7-XXX-XXX-XXXX" class="phone-link" aria-label="Позвонить нам">
+                        <span class="phone-link__icon" aria-hidden="true">📞</span>
+                        <span class="phone-link__text">+7 (XXX) XXX-XX-XX</span>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Открыть мобильное меню" aria-expanded="false">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -70,39 +134,44 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Плавающие декоративные элементы -->
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        
-        <!-- Геометрические фигуры -->
-        <div class="geometric-shape geometric-shape--circle" style="top: 15%; right: 5%;"></div>
-        <div class="geometric-shape geometric-shape--square" style="bottom: 20%; left: 10%;"></div>
-        <div class="geometric-shape geometric-shape--triangle" style="top: 40%; left: 5%;"></div>
-        
         <!-- Hero Section -->
-        <section class="hero hero--courses">
+        <section id="hero" class="hero hero--courses">
             <div class="container">
                 <div class="hero__content">
                     <div class="hero__text">
                         <h1 class="hero__title text-gradient animate-slide-left delay-200">
-                            Курсы по оформлению бровей
+                            Курсы по бровям и ресницам
                         </h1>
                         <p class="hero__subtitle animate-slide-left delay-400">
-                            Станьте профессиональным мастером по бровям! Обучение с нуля, 
-                            практические занятия, индивидуальный подход. Получите сертификат и начните зарабатывать.
+                            Станьте профессиональным мастером по бровям и ресницам! 
+                            Обучение с нуля, практические занятия, индивидуальный подход. 
+                            Получите сертификат и начните зарабатывать.
                         </p>
+                        <div class="hero__benefits animate-slide-left delay-500">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span>Обучение с нуля</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span>Практика на моделях</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span>Сертификат по окончании</span>
+                            </div>
+                        </div>
                         <div class="hero__actions animate-slide-left delay-600">
                             <a href="#courses" class="btn btn-primary btn-lg hover-lift">
                                 Выбрать курс
                             </a>
-                            <a href="#contact" class="btn btn-secondary btn-lg hover-lift">
+                            <a href="../index.html#contact" class="btn btn-secondary btn-lg hover-lift">
                                 Записаться на обучение
                             </a>
                         </div>
                     </div>
                     <div class="hero__image">
-                        <img src="../images/courses/courses-hero.svg" alt="Курсы по бровям" class="hero__img animate-slide-right delay-300">
+                        <img src="../images/courses/courses-hero.jpg" alt="Обучение на курсах по бровям и ресницам" class="hero__img animate-slide-right delay-300" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -120,9 +189,9 @@
                 
                 <div class="courses-grid">
                     <!-- Базовый курс -->
-                    <div class="course-card course-card--basic">
+                    <div class="course-card course-card--basic hover-lift animate-fade-up delay-100">
                         <div class="course-card__header">
-                            <div class="course-card__badge">Базовый</div>
+                            <div class="course-card__badge course-card__badge--new">Новый</div>
                             <h3 class="course-card__title">Основы оформления бровей</h3>
                             <div class="course-card__price">
                                 <span class="course-card__price-amount">25 000₽</span>
@@ -131,17 +200,18 @@
                         </div>
                         
                         <div class="course-card__content">
-                            <div class="course-card__duration">
-                                <span class="course-card__duration-icon">⏱️</span>
-                                <span>3 дня (24 часа)</span>
+                            <div class="course-card__meta">
+                                <div class="course-card__duration">
+                                    <span class="course-card__duration-icon">⏱️</span>
+                                    <span>3 дня (24 часа)</span>
+                                </div>
+                                <div class="course-card__schedule">
+                                    <span class="course-card__schedule-icon">📅</span>
+                                    <span>Пн-Ср 10:00-18:00</span>
+                                </div>
                             </div>
                             
-                            <div class="course-card__schedule">
-                                <span class="course-card__schedule-icon">📅</span>
-                                <span>Пн-Ср 10:00-18:00</span>
-                            </div>
-                            
-                            <h4 class="course-card__subtitle">Что входит в курс:</h4>
+                            <h4 class="course-card__subtitle">Программа курса:</h4>
                             <ul class="course-card__features">
                                 <li>Теория анатомии бровей</li>
                                 <li>Анализ формы лица</li>
@@ -159,14 +229,14 @@
                         </div>
                         
                         <div class="course-card__footer">
-                            <a href="#contact" class="btn btn-primary btn-full hover-lift">
+                            <button class="btn btn-primary btn-full hover-lift" onclick="openCourseModal('basic')">
                                 Записаться на курс
-                            </a>
+                            </button>
                         </div>
                     </div>
                     
                     <!-- Продвинутый курс -->
-                    <div class="course-card course-card--advanced">
+                    <div class="course-card course-card--advanced hover-lift animate-fade-up delay-200">
                         <div class="course-card__header">
                             <div class="course-card__badge course-card__badge--popular">Популярный</div>
                             <h3 class="course-card__title">Продвинутые техники</h3>
@@ -177,17 +247,18 @@
                         </div>
                         
                         <div class="course-card__content">
-                            <div class="course-card__duration">
-                                <span class="course-card__duration-icon">⏱️</span>
-                                <span>5 дней (40 часов)</span>
+                            <div class="course-card__meta">
+                                <div class="course-card__duration">
+                                    <span class="course-card__duration-icon">⏱️</span>
+                                    <span>5 дней (40 часов)</span>
+                                </div>
+                                <div class="course-card__schedule">
+                                    <span class="course-card__schedule-icon">📅</span>
+                                    <span>Пн-Пт 10:00-18:00</span>
+                                </div>
                             </div>
                             
-                            <div class="course-card__schedule">
-                                <span class="course-card__schedule-icon">📅</span>
-                                <span>Пн-Пт 10:00-18:00</span>
-                            </div>
-                            
-                            <h4 class="course-card__subtitle">Что входит в курс:</h4>
+                            <h4 class="course-card__subtitle">Программа курса:</h4>
                             <ul class="course-card__features">
                                 <li>Все из базового курса</li>
                                 <li>Ламинирование бровей</li>
@@ -207,14 +278,14 @@
                         </div>
                         
                         <div class="course-card__footer">
-                            <a href="#contact" class="btn btn-primary btn-full hover-lift">
+                            <button class="btn btn-primary btn-full hover-lift" onclick="openCourseModal('advanced')">
                                 Записаться на курс
-                            </a>
+                            </button>
                         </div>
                     </div>
                     
                     <!-- Индивидуальный курс -->
-                    <div class="course-card course-card--individual">
+                    <div class="course-card course-card--individual hover-lift animate-fade-up delay-300">
                         <div class="course-card__header">
                             <div class="course-card__badge course-card__badge--premium">VIP</div>
                             <h3 class="course-card__title">Индивидуальное обучение</h3>
@@ -225,17 +296,18 @@
                         </div>
                         
                         <div class="course-card__content">
-                            <div class="course-card__duration">
-                                <span class="course-card__duration-icon">⏱️</span>
-                                <span>Гибкий график</span>
+                            <div class="course-card__meta">
+                                <div class="course-card__duration">
+                                    <span class="course-card__duration-icon">⏱️</span>
+                                    <span>Гибкий график</span>
+                                </div>
+                                <div class="course-card__schedule">
+                                    <span class="course-card__schedule-icon">📅</span>
+                                    <span>По вашему расписанию</span>
+                                </div>
                             </div>
                             
-                            <div class="course-card__schedule">
-                                <span class="course-card__schedule-icon">📅</span>
-                                <span>По вашему расписанию</span>
-                            </div>
-                            
-                            <h4 class="course-card__subtitle">Что входит в курс:</h4>
+                            <h4 class="course-card__subtitle">Программа курса:</h4>
                             <ul class="course-card__features">
                                 <li>Все из продвинутого курса</li>
                                 <li>Индивидуальный план обучения</li>
@@ -254,22 +326,22 @@
                         </div>
                         
                         <div class="course-card__footer">
-                            <a href="#contact" class="btn btn-primary btn-full hover-lift">
+                            <button class="btn btn-primary btn-full hover-lift" onclick="openCourseModal('individual')">
                                 Записаться на курс
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Us Section -->
+        <!-- Features Section -->
         <section class="section section--light">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-header__title text-gradient animate-fade-up">Почему выбирают наши курсы</h2>
+                    <h2 class="section-header__title text-gradient animate-fade-up">Особенности обучения</h2>
                     <p class="section-header__subtitle animate-fade-up delay-200">
-                        Уникальный подход к обучению и гарантированный результат
+                        Почему наши курсы выбирают начинающие мастера
                     </p>
                 </div>
                 
@@ -331,86 +403,82 @@
             </div>
         </section>
 
-        <!-- Course Schedule Section -->
+        <!-- Schedule Section -->
         <section class="section">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-header__title">Расписание занятий</h2>
-                    <p class="section-header__subtitle">
-                        Удобные даты и время для обучения
+                    <h2 class="section-header__title text-gradient animate-fade-up">Расписание занятий</h2>
+                    <p class="section-header__subtitle animate-fade-up delay-200">
+                        Удобные варианты обучения для любого графика
                     </p>
                 </div>
                 
                 <div class="schedule-grid">
-                    <div class="schedule-card">
-                        <div class="schedule-card__date">
-                            <span class="schedule-card__month">Декабрь</span>
-                            <span class="schedule-card__day">15-17</span>
+                    <div class="schedule-card hover-lift animate-fade-up delay-100">
+                        <div class="schedule-card__header">
+                            <h3 class="schedule-card__title">Утренние группы</h3>
+                            <div class="schedule-card__time">10:00 - 18:00</div>
                         </div>
-                        <div class="schedule-card__info">
-                            <h3 class="schedule-card__title">Базовый курс</h3>
-                            <p class="schedule-card__description">Основы оформления бровей</p>
-                            <div class="schedule-card__details">
-                                <span>⏱️ 3 дня</span>
-                                <span>💰 25 000₽</span>
-                            </div>
-                        </div>
-                        <div class="schedule-card__status">
-                            <span class="schedule-card__status-badge schedule-card__status-badge--available">Есть места</span>
-                        </div>
-                    </div>
-                    
-                    <div class="schedule-card">
-                        <div class="schedule-card__date">
-                            <span class="schedule-card__month">Декабрь</span>
-                            <span class="schedule-card__day">20-24</span>
-                        </div>
-                        <div class="schedule-card__info">
-                            <h3 class="schedule-card__title">Продвинутый курс</h3>
-                            <p class="schedule-card__description">Продвинутые техники</p>
-                            <div class="schedule-card__details">
-                                <span>⏱️ 5 дней</span>
-                                <span>💰 35 000₽</span>
-                            </div>
-                        </div>
-                        <div class="schedule-card__status">
-                            <span class="schedule-card__status-badge schedule-card__status-badge--limited">2 места</span>
+                        <div class="schedule-card__content">
+                            <ul class="schedule-card__days">
+                                <li>Понедельник - Среда</li>
+                                <li>Вторник - Четверг</li>
+                                <li>Среда - Пятница</li>
+                            </ul>
+                            <p class="schedule-card__description">
+                                Идеально для тех, кто предпочитает заниматься в первой половине дня
+                            </p>
                         </div>
                     </div>
                     
-                    <div class="schedule-card">
-                        <div class="schedule-card__date">
-                            <span class="schedule-card__month">Январь</span>
-                            <span class="schedule-card__day">10-12</span>
+                    <div class="schedule-card hover-lift animate-fade-up delay-200">
+                        <div class="schedule-card__header">
+                            <h3 class="schedule-card__title">Вечерние группы</h3>
+                            <div class="schedule-card__time">18:00 - 22:00</div>
                         </div>
-                        <div class="schedule-card__info">
-                            <h3 class="schedule-card__title">Базовый курс</h3>
-                            <p class="schedule-card__description">Основы оформления бровей</p>
-                            <div class="schedule-card__details">
-                                <span>⏱️ 3 дня</span>
-                                <span>💰 25 000₽</span>
-                            </div>
-                        </div>
-                        <div class="schedule-card__status">
-                            <span class="schedule-card__status-badge schedule-card__status-badge--available">Есть места</span>
+                        <div class="schedule-card__content">
+                            <ul class="schedule-card__days">
+                                <li>Понедельник - Среда</li>
+                                <li>Вторник - Четверг</li>
+                                <li>Среда - Пятница</li>
+                            </ul>
+                            <p class="schedule-card__description">
+                                Для тех, кто работает днем и может заниматься вечером
+                            </p>
                         </div>
                     </div>
                     
-                    <div class="schedule-card">
-                        <div class="schedule-card__date">
-                            <span class="schedule-card__month">Январь</span>
-                            <span class="schedule-card__day">15-19</span>
+                    <div class="schedule-card hover-lift animate-fade-up delay-300">
+                        <div class="schedule-card__header">
+                            <h3 class="schedule-card__title">Выходные группы</h3>
+                            <div class="schedule-card__time">10:00 - 18:00</div>
                         </div>
-                        <div class="schedule-card__info">
-                            <h3 class="schedule-card__title">Продвинутый курс</h3>
-                            <p class="schedule-card__description">Продвинутые техники</p>
-                            <div class="schedule-card__details">
-                                <span>⏱️ 5 дней</span>
-                                <span>💰 35 000₽</span>
-                            </div>
+                        <div class="schedule-card__content">
+                            <ul class="schedule-card__days">
+                                <li>Суббота - Воскресенье</li>
+                                <li>Только суббота (интенсив)</li>
+                                <li>Только воскресенье (интенсив)</li>
+                            </ul>
+                            <p class="schedule-card__description">
+                                Интенсивное обучение в выходные дни для быстрого результата
+                            </p>
                         </div>
-                        <div class="schedule-card__status">
-                            <span class="schedule-card__status-badge schedule-card__status-badge--available">Есть места</span>
+                    </div>
+                    
+                    <div class="schedule-card hover-lift animate-fade-up delay-400">
+                        <div class="schedule-card__header">
+                            <h3 class="schedule-card__title">Индивидуальные занятия</h3>
+                            <div class="schedule-card__time">По договоренности</div>
+                        </div>
+                        <div class="schedule-card__content">
+                            <ul class="schedule-card__days">
+                                <li>Любые дни недели</li>
+                                <li>Гибкий график</li>
+                                <li>Персональный подход</li>
+                            </ul>
+                            <p class="schedule-card__description">
+                                Максимально гибкий график для занятых людей
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -421,36 +489,36 @@
         <section class="section section--light">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-header__title">Часто задаваемые вопросы</h2>
-                    <p class="section-header__subtitle">
+                    <h2 class="section-header__title text-gradient animate-fade-up">Часто задаваемые вопросы</h2>
+                    <p class="section-header__subtitle animate-fade-up delay-200">
                         Ответы на популярные вопросы о курсах
                     </p>
                 </div>
                 
                 <div class="faq-grid">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Нужны ли базовые знания для начала обучения?</h3>
+                    <div class="faq-item hover-lift animate-fade-up delay-100">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question__title">Нужны ли базовые знания для начала обучения?</h3>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Нет, наши курсы рассчитаны на обучение с нуля. Мы начинаем с самых основ и постепенно переходим к сложным техникам.</p>
+                            <p>Нет, наши курсы рассчитаны на обучение с нуля. Мы начинаем с самых основ и постепенно переходим к сложным техникам. Главное - желание учиться и развиваться!</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Сколько человек в группе?</h3>
+                    <div class="faq-item hover-lift animate-fade-up delay-200">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question__title">Сколько человек в группе?</h3>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Максимум 4 человека в группе, что обеспечивает индивидуальный подход к каждому ученику.</p>
+                            <p>Максимум 4 человека в группе, что обеспечивает индивидуальный подход к каждому ученику. Преподаватель успевает уделить внимание всем.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Предоставляете ли вы материалы для практики?</h3>
+                    <div class="faq-item hover-lift animate-fade-up delay-300">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question__title">Предоставляете ли вы материалы для практики?</h3>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
@@ -458,9 +526,9 @@
                         </div>
                     </div>
                     
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Можно ли оплатить курс в рассрочку?</h3>
+                    <div class="faq-item hover-lift animate-fade-up delay-400">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question__title">Можно ли оплатить курс в рассрочку?</h3>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
@@ -468,19 +536,19 @@
                         </div>
                     </div>
                     
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Выдаете ли вы сертификат?</h3>
+                    <div class="faq-item hover-lift animate-fade-up delay-500">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question__title">Выдаете ли вы сертификат?</h3>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Да, по окончании курса вы получаете сертификат, который признается в салонах красоты Москвы.</p>
+                            <p>Да, по окончании курса вы получаете сертификат, который признается в салонах красоты Москвы. Для продвинутых курсов - диплом.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Помогаете ли с трудоустройством?</h3>
+                    <div class="faq-item hover-lift animate-fade-up delay-600">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question__title">Помогаете ли с трудоустройством?</h3>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
@@ -492,19 +560,19 @@
         </section>
 
         <!-- CTA Section -->
-        <section id="contact" class="section section--accent">
+        <section class="section section--gradient">
             <div class="container">
-                <div class="cta__content text-center">
-                    <h2 class="cta__title">Готовы стать мастером по бровям?</h2>
-                    <p class="cta__subtitle">
+                <div class="cta-content text-center">
+                    <h2 class="cta-title animate-fade-up">Готовы стать мастером по бровям?</h2>
+                    <p class="cta-description animate-fade-up delay-200">
                         Запишитесь на курс и получите скидку 15% при оплате за месяц до начала обучения
                     </p>
-                    <div class="cta__actions">
-                        <a href="tel:+7-XXX-XXX-XXXX" class="btn btn--primary btn--large">
-                            Позвонить для записи
+                    <div class="cta-actions animate-fade-up delay-300">
+                        <a href="../index.html#contact" class="btn btn-primary btn-lg hover-lift">
+                            Записаться на курс
                         </a>
-                        <a href="https://wa.me/7XXXXXXXXXX" class="btn btn--secondary btn--large">
-                            Написать в WhatsApp
+                        <a href="tel:+7-XXX-XXX-XXXX" class="btn btn-secondary btn-lg hover-lift">
+                            Позвонить для консультации
                         </a>
                     </div>
                 </div>
@@ -519,71 +587,170 @@
                 <div class="footer__section">
                     <h3 class="footer__title">Beauty Master</h3>
                     <p class="footer__description">
-                        Профессиональное оформление бровей и ламинирование ресниц в Москве
+                        Профессиональные курсы по бровям и ресницам. 
+                        Обучение с нуля до профессионального уровня.
                     </p>
                     <div class="footer__social">
                         <a href="#" class="social-link" aria-label="Instagram">
-                            <span class="social-link__icon">📷</span>
+                            <span>📷</span>
                         </a>
-                        <a href="#" class="social-link" aria-label="VK">
-                            <span class="social-link__icon">💬</span>
+                        <a href="#" class="social-link" aria-label="VKontakte">
+                            <span>💬</span>
                         </a>
                         <a href="#" class="social-link" aria-label="Telegram">
-                            <span class="social-link__icon">📱</span>
+                            <span>📱</span>
                         </a>
                     </div>
                 </div>
                 
                 <div class="footer__section">
-                    <h4 class="footer__subtitle">Услуги</h4>
+                    <h3 class="footer__title">Услуги</h3>
                     <ul class="footer__list">
-                        <li><a href="/pages/services.html#brows">Оформление бровей</a></li>
-                        <li><a href="/pages/services.html#eyelashes">Ламинирование ресниц</a></li>
-                        <li><a href="/pages/courses.html">Курсы по бровям</a></li>
+                        <li><a href="../index.html#services">Коррекция бровей</a></li>
+                        <li><a href="../index.html#services">Окрашивание бровей</a></li>
+                        <li><a href="../index.html#services">Ламинирование ресниц</a></li>
+                        <li><a href="../index.html#services">Наращивание ресниц</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h4 class="footer__subtitle">Информация</h4>
+                    <h3 class="footer__title">Курсы</h3>
                     <ul class="footer__list">
-                        <li><a href="/pages/about.html">О мастере</a></li>
-                        <li><a href="/pages/portfolio.html">Портфолио</a></li>
-                        <li><a href="/pages/blog.html">Блог</a></li>
+                        <li><a href="#courses">Базовый курс</a></li>
+                        <li><a href="#courses">Продвинутый курс</a></li>
+                        <li><a href="#courses">Индивидуальное обучение</a></li>
+                        <li><a href="#courses">Мастер-классы</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h4 class="footer__subtitle">Контакты</h4>
-                    <div class="footer__contact">
-                        <p class="footer__contact-item">
-                            <span class="footer__contact-icon">📍</span>
-                            Москва, ул. Примерная, д. 123
-                        </p>
-                        <p class="footer__contact-item">
-                            <span class="footer__contact-icon">📞</span>
-                            <a href="tel:+7-XXX-XXX-XXXX">+7 (XXX) XXX-XX-XX</a>
-                        </p>
-                        <p class="footer__contact-item">
-                            <span class="footer__contact-icon">✉️</span>
-                            <a href="mailto:info@beauty-master.ru">info@beauty-master.ru</a>
-                        </p>
-                    </div>
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list">
+                        <li><a href="tel:+7-XXX-XXX-XXXX">+7 (XXX) XXX-XX-XX</a></li>
+                        <li><a href="mailto:info@beauty-master.ru">info@beauty-master.ru</a></li>
+                        <li>г. Москва, ул. Примерная, д. 123</li>
+                        <li>Пн-Пт: 9:00-20:00</li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer__bottom">
                 <p class="footer__copyright">
-                    © 2024 Beauty Master. Все права защищены.
+                    © 2025 Beauty Master. Все права защищены.
                 </p>
                 <div class="footer__links">
-                    <a href="/privacy">Политика конфиденциальности</a>
-                    <a href="/terms">Условия использования</a>
+                    <a href="#privacy">Политика конфиденциальности</a>
+                    <a href="#terms">Условия использования</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Course Modal -->
+    <div id="courseModal" class="modal" aria-hidden="true">
+        <div class="modal__overlay" onclick="closeCourseModal()"></div>
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeCourseModal()" aria-label="Закрыть модальное окно">
+                <span>&times;</span>
+            </button>
+            <h2 id="modalTitle" class="modal__title">Запись на курс</h2>
+            <form id="courseForm" class="form">
+                <div class="form-group">
+                    <label for="modalName" class="form-label">Имя *</label>
+                    <input type="text" id="modalName" name="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalPhone" class="form-label">Телефон *</label>
+                    <input type="tel" id="modalPhone" name="phone" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalEmail" class="form-label">Email</label>
+                    <input type="email" id="modalEmail" name="email" class="form-input">
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-lg btn-full hover-lift">
+                    Записаться на курс
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" aria-hidden="true">
+        <div class="modal__overlay" onclick="closeSuccessModal()"></div>
+        <div class="modal__content modal__content--success">
+            <button class="modal__close" onclick="closeSuccessModal()" aria-label="Закрыть модальное окно">
+                <span>&times;</span>
+            </button>
+            <div class="success-content">
+                <div class="success-icon">✅</div>
+                <h2 class="success-title">Спасибо!</h2>
+                <p class="success-message">Мы свяжемся с вами в ближайшее время для уточнения деталей.</p>
+                <button class="btn btn-primary" onclick="closeSuccessModal()">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="../scripts/app.js"></script>
+    <script>
+        // Функция для переключения FAQ
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Закрываем все FAQ
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Открываем текущий, если он был закрыт
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+        
+        // Функции для модальных окон
+        function openCourseModal(courseType) {
+            const modal = document.getElementById('courseModal');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            // Устанавливаем заголовок в зависимости от курса
+            const courseNames = {
+                'basic': 'Запись на курс "Основы оформления бровей"',
+                'advanced': 'Запись на курс "Продвинутые техники"',
+                'individual': 'Запись на курс "Индивидуальное обучение"'
+            };
+            
+            modalTitle.textContent = courseNames[courseType] || 'Запись на курс';
+            modal.setAttribute('aria-hidden', 'false');
+            modal.style.display = 'flex';
+        }
+        
+        function closeCourseModal() {
+            const modal = document.getElementById('courseModal');
+            modal.setAttribute('aria-hidden', 'true');
+            modal.style.display = 'none';
+        }
+        
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.setAttribute('aria-hidden', 'true');
+            modal.style.display = 'none';
+        }
+        
+        // Обработка формы курса
+        document.getElementById('courseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            closeCourseModal();
+            
+            // Показываем модальное окно успеха
+            const successModal = document.getElementById('successModal');
+            successModal.setAttribute('aria-hidden', 'false');
+            successModal.style.display = 'flex';
+        });
+    </script>
 </body>
 </html>
